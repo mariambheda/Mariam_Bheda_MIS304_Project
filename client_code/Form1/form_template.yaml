@@ -49,31 +49,37 @@ components:
       type: Label
       layout_properties: {row: UBWWEB, width_xs: 4, col_xs: 7}
     - name: wallLbl
-      properties: {text: 'My Wall:', visible: true, font_size: 35}
+      properties: {role: null, align: center, border: '', foreground: 'theme:On Secondary
+          Container', visible: true, text: 'My Wall:', font_size: 35, background: '',
+        underline: false}
       type: Label
       layout_properties: {row: VVNRRV, width_xs: 4, col_xs: 1}
+      data_bindings: []
     - name: label_3
-      properties: {text: Sign My Wall !, visible: true, align: center, font_size: 35}
+      properties: {text: Sign My Wall !, visible: true, align: center, font_size: 35,
+        foreground: 'theme:On Secondary Container'}
       type: Label
       layout_properties: {row: VVNRRV, width_xs: 6, col_xs: 6}
+    - name: label_4
+      properties: {visible: true, text: 'Name:', align: right, foreground: 'theme:On
+          Secondary Container'}
+      type: Label
+      layout_properties: {row: GIPCHG, width_xs: 1, col_xs: 6}
+    - name: text_box_1
+      properties: {visible: true, background: 'theme:Tertiary Container', italic: true}
+      type: TextBox
+      layout_properties: {row: GIPCHG, width_xs: 3, col_xs: 7}
+      event_bindings: {pressed_enter: signBtn_click}
+    - name: signBtn
+      properties: {text: Sign !, visible: true, background: 'theme:On Secondary Container',
+        foreground: 'theme:On Tertiary', bold: true}
+      type: Button
+      layout_properties: {row: GIPCHG, width_xs: 2, col_xs: 10}
+      event_bindings: {click: signBtn_click}
     - name: repeating_panel_1
       properties: {item_template: Form1.ItemTemplate1}
       type: RepeatingPanel
-      layout_properties: {row: RPVPPY, width_xs: 6, col_xs: 0}
-    - name: label_4
-      properties: {visible: true, text: 'Name:', align: right}
-      type: Label
-      layout_properties: {row: RPVPPY, width_xs: 2, col_xs: 6}
-    - name: text_box_1
-      properties: {visible: true}
-      type: TextBox
-      layout_properties: {row: RPVPPY, width_xs: 3, col_xs: 8}
-      event_bindings: {pressed_enter: signBtn_click}
-    - name: signBtn
-      properties: {text: Sign!, visible: true}
-      type: Button
-      layout_properties: {row: RPVPPY, width_xs: 1, col_xs: 11}
-      event_bindings: {click: signBtn_click}
+      layout_properties: {row: EWVXYU, width_xs: 6, col_xs: 0}
   - name: column_panel_2
     properties: {}
     type: ColumnPanel

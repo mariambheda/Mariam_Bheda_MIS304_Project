@@ -5,6 +5,9 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import datetime
+import anvil.media
+
+
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -51,7 +54,9 @@ class Form1(Form1Template):
     self.label_6.text = self.pictures[self.count_click % len(self.pictures)]['Description']
     self.load_wall()
 
-    
+    c=FileLoader()
+    if c.file is not None:
+      self.image.source=c.file
 
 
   def signBtn_click(self, **event_args):
@@ -87,3 +92,4 @@ class Form1(Form1Template):
 
   def drop_down_1_change(self, **event_args):
     self.image_1.source = self.pictures[self.drop_down_1.selected_value % len(self.pictures)]['Image']
+
