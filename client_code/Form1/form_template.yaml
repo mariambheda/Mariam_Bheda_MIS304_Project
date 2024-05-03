@@ -1,0 +1,107 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'JWQFIX,HGSTKQ'}
+    components:
+    - name: welcomeLbl
+      properties: {text: Welcome to My Page, font_size: 22, align: center, tooltip: welcome noobs}
+      type: Label
+      layout_properties: {row: IJWOTP, width_xs: 12, col_xs: 0}
+    - name: drop_down_1
+      properties: {}
+      type: DropDown
+      layout_properties: {row: NCRDRJ, width_xs: 3, col_xs: 5}
+      event_bindings: {change: drop_down_1_change}
+    - name: disappearBtn
+      properties: {text: Make the Map Disappear!, role: tonal-button}
+      type: Button
+      layout_properties: {row: EJWPGO, width_xs: 4, col_xs: 4}
+      event_bindings: {click: disappearBtn_click}
+    - name: map_1
+      properties: {height: 391}
+      type: GoogleMap
+      layout_properties: {row: EHFOUX, width_xs: 12, col_xs: 0}
+    - name: left_btn
+      properties: {text: '', icon: 'fa:arrow-circle-o-left'}
+      type: Button
+      layout_properties: {row: UEYOWK, width_xs: 1, col_xs: 6}
+      event_bindings: {click: left_btn_click}
+      data_bindings: []
+    - name: image_1
+      properties: {visible: false}
+      type: Image
+      layout_properties: {row: UEYOWK, width_xs: 4, col_xs: 7}
+    - name: right_btn
+      properties: {text: '', icon: 'fa:arrow-circle-o-right'}
+      type: Button
+      layout_properties: {row: UEYOWK, width_xs: 1, col_xs: 11}
+      event_bindings: {click: right_btn_click}
+    - name: infoAbtPin
+      properties: {visible: false}
+      type: Label
+      layout_properties: {row: UEYOWK, width_xs: 7, col_xs: 0}
+    - name: label_6
+      properties: {}
+      type: Label
+      layout_properties: {row: UBWWEB, width_xs: 4, col_xs: 7}
+    - name: wallLbl
+      properties: {text: 'My Wall:', visible: true, font_size: 35}
+      type: Label
+      layout_properties: {row: VVNRRV, width_xs: 4, col_xs: 1}
+    - name: label_3
+      properties: {text: Sign My Wall!, visible: true, align: center, font_size: 35}
+      type: Label
+      layout_properties: {row: VVNRRV, width_xs: 6, col_xs: 6}
+    - name: repeating_panel_1
+      properties: {item_template: Form1.ItemTemplate1}
+      type: RepeatingPanel
+      layout_properties: {row: RPVPPY, width_xs: 6, col_xs: 0}
+    - name: label_4
+      properties: {visible: true, text: 'Name:', align: right}
+      type: Label
+      layout_properties: {row: RPVPPY, width_xs: 2, col_xs: 6}
+    - name: text_box_1
+      properties: {visible: true}
+      type: TextBox
+      layout_properties: {row: RPVPPY, width_xs: 3, col_xs: 8}
+      event_bindings: {pressed_enter: signBtn_click}
+    - name: signBtn
+      properties: {text: Sign!, visible: true}
+      type: Button
+      layout_properties: {row: RPVPPY, width_xs: 1, col_xs: 11}
+      event_bindings: {click: signBtn_click}
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SSNHNE,GBYSLS'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: label_1
+    properties: {text: Hello}
+    type: Label
+    layout_properties: {grid_position: 'EVWHVS,NQUWXN'}
+  - name: label_2
+    properties: {text: Phoena}
+    type: Label
+    layout_properties: {grid_position: 'YBXZTQ,NHZUVG'}
+  - name: label_5
+    properties: {text: Anvil}
+    type: Label
+    layout_properties: {grid_position: 'DXIQEG,VCVNDY'}
