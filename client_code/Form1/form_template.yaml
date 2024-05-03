@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', background: 'theme:On Tertiary'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -14,19 +14,13 @@ components:
     layout_properties: {grid_position: 'JWQFIX,HGSTKQ'}
     components:
     - name: welcomeLbl
-      properties: {text: Welcome to My Page, font_size: 22, align: center, tooltip: welcome noobs}
+      properties: {role: headline, align: center, tooltip: welcome noobs, foreground: 'theme:On
+          Background', visible: true, text: "\ud83e\udd18\ud83c\udffc\ud83d\uded7\
+          \ Elevators around UT \ud83d\uded7\ud83e\udd18\ud83c\udffc", font_size: 40,
+        italic: false, background: 'theme:Tertiary Container', bold: true}
       type: Label
       layout_properties: {row: IJWOTP, width_xs: 12, col_xs: 0}
-    - name: drop_down_1
-      properties: {}
-      type: DropDown
-      layout_properties: {row: NCRDRJ, width_xs: 3, col_xs: 5}
-      event_bindings: {change: drop_down_1_change}
-    - name: disappearBtn
-      properties: {text: Make the Map Disappear!, role: tonal-button}
-      type: Button
-      layout_properties: {row: EJWPGO, width_xs: 4, col_xs: 4}
-      event_bindings: {click: disappearBtn_click}
+      data_bindings: []
     - name: map_1
       properties: {height: 391}
       type: GoogleMap
@@ -59,7 +53,7 @@ components:
       type: Label
       layout_properties: {row: VVNRRV, width_xs: 4, col_xs: 1}
     - name: label_3
-      properties: {text: Sign My Wall!, visible: true, align: center, font_size: 35}
+      properties: {text: Sign My Wall !, visible: true, align: center, font_size: 35}
       type: Label
       layout_properties: {row: VVNRRV, width_xs: 6, col_xs: 6}
     - name: repeating_panel_1
@@ -92,16 +86,4 @@ components:
   properties: {}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
-  components:
-  - name: label_1
-    properties: {text: Hello}
-    type: Label
-    layout_properties: {grid_position: 'EVWHVS,NQUWXN'}
-  - name: label_2
-    properties: {text: Phoena}
-    type: Label
-    layout_properties: {grid_position: 'YBXZTQ,NHZUVG'}
-  - name: label_5
-    properties: {text: Anvil}
-    type: Label
-    layout_properties: {grid_position: 'DXIQEG,VCVNDY'}
+  components: []

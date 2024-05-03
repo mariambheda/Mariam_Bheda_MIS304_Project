@@ -13,7 +13,7 @@ class Form1(Form1Template):
     # self.youtube_video_1.youtube_id = 'FALlhXl6CmA'
     # Any code you write here will run before the form opens.
     self.count_click = 0
-    self.disappearBtn.text='Make the map disappear!'
+    #self.disappearBtn.text='Make the map disappear!'
     
     self.map_1.center = GoogleMap.LatLng(30.286376,-97.737654)
     self.map_1.zoom = 15
@@ -32,7 +32,7 @@ class Form1(Form1Template):
 
     # wall stuff
     # self.load_wall()
-    self.drop_down_1.items = [('Hello',1),('There',2)]
+  # self.drop_down_1.items = [('Hello',1),('There',2)]
 
   def marker_click(self, sender, **properties):
     self.infoAbtPin.visible=True
@@ -53,14 +53,6 @@ class Form1(Form1Template):
 
     
 
-  def disappearBtn_click(self, **event_args):
-    if self.map_1.visible == True:
-      self.map_1.visible = False
-      self.disappearBtn.text='Make the map appear!'
-      open_form('Form2')
-    else:
-      self.map_1.visible=True
-      self.disappearBtn.text='Make the map disappear!'
 
   def signBtn_click(self, **event_args):
     if len(self.text_box_1.text.strip())>0:
