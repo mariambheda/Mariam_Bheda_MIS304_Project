@@ -5,7 +5,9 @@ import anvil.server
 import datetime
 import anvil.media
 
-# Define your server function
+
+
+# Define the server function to process the uploaded image
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.

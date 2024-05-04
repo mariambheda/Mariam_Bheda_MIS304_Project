@@ -47,6 +47,9 @@ class Form1(Form1Template):
 
     self.infoAbtPin.text += '\nThis pin\'s location is '+str(sender.tag['Lat'])+' North, '+str(sender.tag['Lon']) + ' West'
     self.infoAbtPin.text += '\nIt is called ' + sender.tag['Name']
+
+   
+
     
     self.image_1.visible=True
     self.pictures = tables.app_tables.images.search(Location=sender.tag)
@@ -54,11 +57,9 @@ class Form1(Form1Template):
     self.image_1.source = self.pictures[self.count_click % len(self.pictures)]['Image']
     self.label_6.text = self.pictures[self.count_click % len(self.pictures)]['Description']
     self.load_wall()
+  
 
-    c=FileLoader()
-    if c.file is not None:
-      self.image.source=c.file
-
+  
 
   def signBtn_click(self, **event_args):
     if len(self.text_box_1.text.strip())>0:
