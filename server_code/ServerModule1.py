@@ -39,3 +39,7 @@ def sign_the_wall(name):
   # need to import datetime above!
   now = datetime.datetime.now()
   tables.app_tables.wall.add_row(Signer=name,When=now)
+
+
+
+

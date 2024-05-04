@@ -94,3 +94,9 @@ class Form1(Form1Template):
   def drop_down_1_change(self, **event_args):
     self.image_1.source = self.pictures[self.drop_down_1.selected_value % len(self.pictures)]['Image']
 
+
+
+
+
+
+
