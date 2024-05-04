@@ -25,29 +25,33 @@ components:
       properties: {height: 391}
       type: GoogleMap
       layout_properties: {row: EHFOUX, width_xs: 12, col_xs: 0}
+    - name: infoAbtPin
+      properties: {visible: false, background: 'theme:Tertiary Container', align: center}
+      type: Label
+      layout_properties: {row: UEYOWK, width_xs: 7, col_xs: 0}
+      data_bindings:
+      - {property: text, code: 'self.item['''']', writeback: false}
     - name: left_btn
-      properties: {text: '', icon: 'fa:arrow-circle-o-left'}
+      properties: {text: '', icon: 'fa:arrow-circle-left', bold: false, font_size: 30,
+        visible: true, background: '', icon_align: left}
       type: Button
-      layout_properties: {row: UEYOWK, width_xs: 1, col_xs: 6}
+      layout_properties: {row: UEYOWK, width_xs: 1, col_xs: 7}
       event_bindings: {click: left_btn_click}
       data_bindings: []
     - name: image_1
-      properties: {visible: false}
+      properties: {visible: true, background: ''}
       type: Image
-      layout_properties: {row: UEYOWK, width_xs: 4, col_xs: 7}
+      layout_properties: {row: UEYOWK, width_xs: 3, col_xs: 8}
     - name: right_btn
-      properties: {text: '', icon: 'fa:arrow-circle-o-right'}
+      properties: {text: '', icon: 'fa:arrow-circle-right', font_size: 30, align: center,
+        icon_align: left}
       type: Button
       layout_properties: {row: UEYOWK, width_xs: 1, col_xs: 11}
       event_bindings: {click: right_btn_click}
-    - name: infoAbtPin
-      properties: {visible: false}
-      type: Label
-      layout_properties: {row: UEYOWK, width_xs: 7, col_xs: 0}
     - name: label_6
-      properties: {}
+      properties: {align: center}
       type: Label
-      layout_properties: {row: UBWWEB, width_xs: 4, col_xs: 7}
+      layout_properties: {row: JAAAZT, width_xs: 3, col_xs: 8}
     - name: wallLbl
       properties: {role: null, align: center, border: '', foreground: 'theme:On Secondary
           Container', visible: true, text: 'My Wall:', font_size: 35, background: '',

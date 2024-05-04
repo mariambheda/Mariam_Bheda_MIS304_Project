@@ -46,7 +46,7 @@ class Form1(Form1Template):
       self.infoAbtPin.text += 's'
 
     self.infoAbtPin.text += '\nThis pin\'s location is '+str(sender.tag['Lat'])+' North, '+str(sender.tag['Lon']) + ' West'
-    self.infoAbtPin.text += '\nIt is called ' + sender.tag['Name']
+    self.infoAbtPin.text += '\nThis building is called ' + sender.tag['Name']
 
    
 
