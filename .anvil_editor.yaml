@@ -1,8 +1,6 @@
 unique_ids:
   forms:
     Form1: YLPUD74WA42WIHTNTI7KHPN5ZDNZN6GB
-    Form1.Form2: '1714813093065905717276677.5936'
-    Form1.Form2.Form1_copy: '1714813133245900008802577.8558'
   modules: {}
   server_modules:
     ServerModule1: '1714765780096887758976883.1946'
