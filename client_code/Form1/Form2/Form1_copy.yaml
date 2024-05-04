@@ -1,4 +1,4 @@
-is_package: true
+is_package: false
 container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
@@ -21,6 +21,11 @@ components:
       type: Label
       layout_properties: {row: IJWOTP, width_xs: 12, col_xs: 0}
       data_bindings: []
+    - name: column_panel_1
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {row: EHFOUX, width_xs: 2, col_xs: 4}
+      components: []
     - name: map_1
       properties: {height: 391}
       type: GoogleMap
@@ -93,8 +98,4 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {slot: left-nav}
-  components: []
+custom_component: true
