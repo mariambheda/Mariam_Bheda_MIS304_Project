@@ -49,7 +49,8 @@ components:
       layout_properties: {row: UEYOWK, width_xs: 1, col_xs: 11}
       event_bindings: {click: right_btn_click}
     - name: label_6
-      properties: {align: center}
+      properties: {align: center, foreground: 'theme:On Secondary Container', text: hrello,
+        font_size: 17}
       type: Label
       layout_properties: {row: JAAAZT, width_xs: 3, col_xs: 8}
     - name: wallLbl
